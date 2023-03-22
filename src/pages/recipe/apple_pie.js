@@ -17,13 +17,13 @@ export default function ApplePiePage() {
   return (
     <>
       <NavBar />
-      <div className="flex">
+      <div className="flex h-[calc(100vh-64px)]">
         <RecipeOutline
           section={section}
           setSection={setSection}
           allSections={SECTION}
         />
-        <div className="h-screen w-4/5 mt-12 px-16">
+        <div className="w-4/5 mt-12 px-16">
           <Heading>{section}</Heading>
           TODO: Recipe page
         </div>

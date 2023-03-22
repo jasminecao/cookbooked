@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       colors: {
         bg_white: '#FDFDFB',
-        light_purple: '#D8E0F2',
+        light_purple: '#E9EEFA',
         green: '#6B8C85',
       },
     },
