@@ -1,6 +1,10 @@
 import NavBar from '@/components/NavBar'
 import RecipeOutline from '@/components/RecipeOutline'
-import { Heading } from '@/components/styles/Text'
+import RecipeIntro from '@/components/RecipeIntro'
+import PieDough from '@/components/PieDough'
+import { Checkbox } from '@/components/Checkbox'
+import { Heading, SubHeading } from '@/components/styles/Text'
+import { Tag } from '@/components/styles/Tag'
 import { useState } from 'react'
 
 const SECTION = {
@@ -14,6 +18,17 @@ export default function ApplePiePage() {
   // which section of the recipe to show
   const [section, setSection] = useState(SECTION.INTRO)
 
+  const displaySection = (section) => {
+    switch (section) {
+      case SECTION.INTRO:
+        return <RecipeIntro />
+      case SECTION.PIE_DOUGH:
+        return <PieDough />
+      default:
+        return <div>Coming Soon</div>
+    }
+  }
+
   return (
     <>
       <NavBar />
@@ -23,10 +38,7 @@ export default function ApplePiePage() {
           setSection={setSection}
           allSections={SECTION}
         />
-        <div className="w-4/5 mt-12 px-16">
-          <Heading>{section}</Heading>
-          TODO: Recipe page
-        </div>
+        {displaySection(section)}
       </div>
     </>
   )

@@ -5,6 +5,10 @@ export const Heading = ({ children }) => (
   <h1 className="text-4xl font-medium">{children}</h1>
 )
 
+export const SubHeading = ({ children }) => (
+  <h2 className="text-2xl font-medium mb-3">{children}</h2>
+)
+
 /**
  * Surrounds a number with a circle border (for recipe outline)
  * @param {number} number 

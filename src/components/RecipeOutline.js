@@ -3,7 +3,7 @@ import { CircleNumber } from '@/components/styles/Text'
 
 const RecipeOutline = ({ section, setSection, allSections }) => {
   return (
-    <div className="w-1/5 pt-7 border-r-2">
+    <div className="w-1/5 pt-7 border-r-2 border-light_gray" style={{position: 'relative'}}>
       {Object.entries(allSections).map(
         ([sectionKey, sectionName], sectionIdx) => {
           return (
@@ -28,6 +28,9 @@ const RecipeOutline = ({ section, setSection, allSections }) => {
           )
         }
       )}
+      <div className="py-4 px-8 border-t-2 border-light_gray w-full" style={{position: 'absolute', bottom: '0'}} >
+        <span className="border-b-2 border-light_gray text-gray" style={{cursor: 'pointer'}} onClick={() => location.reload()}>Restart Progress</span>
+      </div>
     </div>
   )
 }
