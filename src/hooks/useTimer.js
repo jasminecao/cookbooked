@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { XCircleIcon, PlayIcon } from '@primer/octicons-react'
 
 export function useTimer() {
   const [hasStarted, setHasStarted] = useState(false)
@@ -98,5 +97,5 @@ export function useTimer() {
     </button>
   )
 
-  return [Timer, startTimer, pauseTimer, cancelTimer, hasStarted]
+  return [Timer, startTimer, hasStarted]
 }
