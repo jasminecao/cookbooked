@@ -24,10 +24,17 @@ export default function Home() {
             <span className="text pl-1 text-green">Sort</span>
           </div>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 h-screen"> 
-            <div className="rounded overflow-hidden shadow-lg mt-6" style={{width: "423px", height: "323px"}}>
+        <div className="grid grid-cols-2 grid-rows-2 h-screen">
+          <div
+            className="rounded overflow-hidden shadow-lg mt-6"
+            style={{ width: '423px', height: '323px' }}
+          >
             <Link href="/recipe/apple_pie">
-              <img className="w-full" src="/apple-pie.png" alt="Apple pie example" />
+              <img
+                className="w-full"
+                src="/apple-pie.png"
+                alt="Apple pie example"
+              />
               <div className="px-6 py-4">
                 <span className="font-bold text-xl mb-2">Apple Pie</span>
                 <span className="text-gray-700 text-base float-right">
@@ -38,10 +45,17 @@ export default function Home() {
                 <Tag background={'bg-light_purple'}>dessert</Tag>
                 <Tag background={'bg-light_pink'}>baking</Tag>
               </div>
-              </Link>
-            </div>
-          <div className="rounded overflow-hidden shadow-lg mt-6" style={{width: "423px", height: "323px"}}>
-            <img className="w-full" src="/blueberry-muffins.png" alt="Blueberry Muffins" />
+            </Link>
+          </div>
+          <div
+            className="rounded overflow-hidden shadow-lg mt-6"
+            style={{ width: '423px', height: '323px' }}
+          >
+            <img
+              className="w-full"
+              src="/blueberry-muffins.png"
+              alt="Blueberry Muffins"
+            />
             <div className="px-6 py-4">
               <span className="font-bold text-xl mb-2">Blueberry Muffins</span>
               <span className="text-gray-700 text-base float-right">
@@ -53,10 +67,19 @@ export default function Home() {
               <Tag background={'bg-light_pink'}>baking</Tag>
             </div>
           </div>
-          <div className="rounded overflow-hidden shadow-lg" style={{width: "423px", height: "323px"}}>
-            <img className="w-full" src="/cookies.png" alt="Chocolate Chip Cookies" />
+          <div
+            className="rounded overflow-hidden shadow-lg"
+            style={{ width: '423px', height: '323px' }}
+          >
+            <img
+              className="w-full"
+              src="/cookies.png"
+              alt="Chocolate Chip Cookies"
+            />
             <div className="px-6 py-4">
-              <span className="font-bold text-xl mb-2">Chocolate Chip Cookies</span>
+              <span className="font-bold text-xl mb-2">
+                Chocolate Chip Cookies
+              </span>
               <span className="text-gray-700 text-base float-right">
                 50 min
               </span>
@@ -66,12 +89,15 @@ export default function Home() {
               <Tag background={'bg-light_pink'}>baking</Tag>
             </div>
           </div>
-          <div className="rounded overflow-hidden shadow-lg" style={{width: "423px", height: "323px"}}>
+          <div
+            className="rounded overflow-hidden shadow-lg"
+            style={{ width: '423px', height: '323px' }}
+          >
             <img className="w-full" src="/chili.png" alt="Chili" />
             <div className="px-6 py-4">
               <span className="font-bold text-xl mb-2">Chili</span>
               <span className="text-gray-700 text-base float-right">
-              1 hr 30 min
+                1 hr 30 min
               </span>
             </div>
             <div className="px-6 pb-2">

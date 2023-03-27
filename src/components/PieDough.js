@@ -2,7 +2,6 @@ import { Checkbox } from '@/components/Checkbox'
 import { Heading, SubHeading } from '@/components/styles/Text'
 import { IngredientInfo } from '@/components/styles/IngredientInfo'
 import Ingredients from '@/components/Accordion'
-import { Tag } from '@/components/styles/Tag'
 
 const PieDough = () => {
     return (

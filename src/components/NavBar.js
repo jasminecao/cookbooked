@@ -14,12 +14,16 @@ const NavBar = () => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
         <link rel="icon" href="/logo.svg" />
       </Head>
       <nav
         className="flex h-16 bg-bg_white px-9"
-        style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.05);' }}
+        style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.05)' }}
       >
         <Link href="/" className="my-auto">
           <div className="flex">
