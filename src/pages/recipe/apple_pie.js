@@ -4,6 +4,7 @@ import RecipeIntro from '@/components/RecipeIntro'
 import PieDough from '@/components/PieDough'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { useEffect, useState } from 'react'
+import { useTimer } from '@/hooks/useTimer'
 
 const SECTION = {
   INTRO: 'Apple Pie',
@@ -16,6 +17,7 @@ export default function ApplePiePage() {
   // which section of the recipe to show
   const [section, setSection] = useLocalStorage('section', SECTION.INTRO)
   const [hasMounted, setHasMounted] = useState(false)
+  const timer = useTimer()
 
   useEffect(() => {
     // prevent hydration error
@@ -27,7 +29,7 @@ export default function ApplePiePage() {
       case SECTION.INTRO:
         return <RecipeIntro />
       case SECTION.PIE_DOUGH:
-        return <PieDough />
+        return <PieDough timer={timer} />
       default:
         return <div>Coming Soon</div>
     }
@@ -42,6 +44,7 @@ export default function ApplePiePage() {
             section={section}
             setSection={setSection}
             allSections={SECTION}
+            timer={timer}
           />
           {displaySection(section)}
         </div>

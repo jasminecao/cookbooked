@@ -1,7 +1,9 @@
 import React from 'react'
 import { CircleNumber } from '@/components/styles/Text'
 
-const RecipeOutline = ({ section, setSection, allSections }) => {
+const RecipeOutline = ({ section, setSection, allSections, timer }) => {
+  const [DoughTimer, startTimer, pauseTimer, cancelTimer, hasStarted] = timer
+
   return (
     <div
       className="w-1/5 pt-7 border-r-2 border-light_gray"
@@ -31,6 +33,7 @@ const RecipeOutline = ({ section, setSection, allSections }) => {
           )
         }
       )}
+      {hasStarted && DoughTimer}
       <div
         className="py-4 px-8 border-t-2 border-light_gray w-full"
         style={{ position: 'absolute', bottom: '0' }}
