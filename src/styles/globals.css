@@ -6,3 +6,34 @@ html,
 body {
   background-color: #FDFDFB;
 }
+
+/* Right triangle, left side slightly down */
+.triangle:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: 6px;
+	right: auto;
+  top: auto;
+	bottom: -7px;
+  border-left: 3px solid #6b8c85;
+  border-right: 3px solid transparent;
+  border-top: 3px solid #6b8c85;
+  border-bottom: 3px solid transparent;
+}
+
+.triangle:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: 7.25px;
+	right: auto;
+  top: auto;
+	bottom: -4px;
+  border-left: 2px solid #fff;
+  border-right: 2px solid transparent;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid transparent;
+}

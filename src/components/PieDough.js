@@ -27,7 +27,7 @@ const PieDough = ({ timer }) => {
             <div>
               <SubHeading>Steps</SubHeading>
               <div style={{ overflow: 'visible' }}>
-                <Checkbox>
+                <Checkbox step>
                   1. Combine{' '}
                   <IngredientInfo amount={'3 cups'}>flour</IngredientInfo> with{' '}
                   <IngredientInfo amount={'4 tablespoons'}>
@@ -36,18 +36,18 @@ const PieDough = ({ timer }) => {
                   and{' '}
                   <IngredientInfo amount={'1 teaspoon'}>salt</IngredientInfo>.
                 </Checkbox>
-                <Checkbox>
+                <Checkbox step>
                   2. Add cold{' '}
                   <IngredientInfo amount={'2 sticks'}>butter</IngredientInfo> to{' '}
                   <IngredientInfo amount={'3 cups'}>flour</IngredientInfo> until
                   clumps form.
                 </Checkbox>
-                <Checkbox>
+                <Checkbox step>
                   3. Sprinkle{' '}
                   <IngredientInfo amount={'1/2 cup'}>ice water</IngredientInfo>{' '}
                   in dough if necessary.
                 </Checkbox>
-                <Checkbox noMargin={true}>
+                <Checkbox noMargin step>
                   4. Chill dough for 30 minutes.
                 </Checkbox>
                 {!hasStarted ? (

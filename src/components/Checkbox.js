@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 
-export const Checkbox = ({noMargin, children}) => {
+/**
+ * 
+ * @param noMargin if true, no margin bottom
+ * @param step if true, margin bottom is 5
+ */
+export const Checkbox = ({ noMargin, step, children }) => {
   const [checked, setChecked] = useState(false)
 
   return (
     <div
-      className={`flex ${!noMargin && 'mb-3'} items-start`}
+      className={`flex ${
+        noMargin ? '' : step ? 'mb-5' : 'mb-3'
+      } items-start w-full`}
       onClick={() => setChecked(!checked)}
-      style={{ cursor: 'pointer', width: 'fit-content' }}
+      style={{ cursor: 'pointer' }}
     >
       {checked ? (
         <img
@@ -24,7 +31,9 @@ export const Checkbox = ({noMargin, children}) => {
           alt="Checkbox icon"
         />
       )}
-      <span className={`${checked && 'text-gray'} ml-2`}>{children}</span>
+      <div className={`${checked ? 'text-gray' : ''} ml-2 w-full`}>
+        {children}
+      </div>
     </div>
   )
-};
+}
