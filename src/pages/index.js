@@ -31,7 +31,7 @@ export default function Home() {
         <div className="grid grid-cols-2 grid-rows-2 h-screen">
           <div
             className="rounded overflow-hidden shadow-lg mt-6"
-            style={{ width: '423px', height: '323px' }}
+            style={{ width: '423px', height: '332px' }}
           >
             <Link href="/recipe/apple_pie">
               <img
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
           <div
             className="rounded overflow-hidden shadow-lg mt-6"
-            style={{ width: '423px', height: '323px' }}
+            style={{ width: '423px', height: '332px' }}
           >
             <img
               className="w-full"
@@ -75,7 +75,7 @@ export default function Home() {
           </div>
           <div
             className="rounded overflow-hidden shadow-lg"
-            style={{ width: '423px', height: '323px' }}
+            style={{ width: '423px', height: '332px' }}
           >
             <img
               className="w-full"
@@ -98,7 +98,7 @@ export default function Home() {
           </div>
           <div
             className="rounded overflow-hidden shadow-lg"
-            style={{ width: '423px', height: '323px' }}
+            style={{ width: '423px', height: '332px' }}
           >
             <img 
             className="w-full" 
