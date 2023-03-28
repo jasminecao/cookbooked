@@ -16,6 +16,10 @@ export default function Home() {
         </div>
         <div className="flex my-2">
           <div className="flex mr-4 border-b-2 border-green">
+            <img className="w-3.5" src="/search-icon.svg" alt="Search icon" />
+            <span className="text pl-1 text-green">Search</span>
+          </div>
+          <div className="flex mr-4 border-b-2 border-green">
             <img className="w-3.5" src="/filter-icon.svg" alt="Filter icon" />
             <span className="text pl-1 text-green">Filter</span>
           </div>
@@ -34,6 +38,7 @@ export default function Home() {
                 className="w-full"
                 src="/apple-pie.png"
                 alt="Apple pie example"
+                style={{ width: '423px', height: '221px' }}
               />
               <div className="px-6 py-4">
                 <span className="font-bold text-xl mb-2">Apple Pie</span>
@@ -55,6 +60,7 @@ export default function Home() {
               className="w-full"
               src="/blueberry-muffins.png"
               alt="Blueberry Muffins"
+              style={{ width: '423px', height: '221px' }}
             />
             <div className="px-6 py-4">
               <span className="font-bold text-xl mb-2">Blueberry Muffins</span>
@@ -75,6 +81,7 @@ export default function Home() {
               className="w-full"
               src="/cookies.png"
               alt="Chocolate Chip Cookies"
+              style={{ width: '423px', height: '221px' }}
             />
             <div className="px-6 py-4">
               <span className="font-bold text-xl mb-2">
@@ -93,7 +100,12 @@ export default function Home() {
             className="rounded overflow-hidden shadow-lg"
             style={{ width: '423px', height: '323px' }}
           >
-            <img className="w-full" src="/chili.png" alt="Chili" />
+            <img 
+            className="w-full" 
+            src="/chili.png"
+            alt="Chili"
+            style={{ width: '423px', height: '221px' }}
+            />
             <div className="px-6 py-4">
               <span className="font-bold text-xl mb-2">Chili</span>
               <span className="text-gray-700 text-base float-right">
