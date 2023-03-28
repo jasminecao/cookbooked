@@ -52,7 +52,7 @@ const PieDough = ({ timer }) => {
                 </Checkbox>
                 {!hasStarted ? (
                   <button
-                    className="bg-white hover:bg-green hover:text-white border-2 border-green text-green text-sm py-2 px-6 rounded-lg ml-8 my-4 flex items-center"
+                    className="bg-white hover:bg-green hover:text-white border-2 border-green text-green text-sm py-2 px-6 rounded-full ml-8 my-4 flex items-center"
                     style={{ width: 'fit-content' }}
                     onClick={() => startTimer(120)}
                   >

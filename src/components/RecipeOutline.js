@@ -1,5 +1,6 @@
 import React from 'react'
 import { CircleNumber } from '@/components/styles/Text'
+import SidebarTimer from '@/components/SidebarAccordion'
 
 const RecipeOutline = ({ section, setSection, allSections, timer }) => {
   const [DoughTimer, startTimer, hasStarted] = timer
@@ -34,8 +35,8 @@ const RecipeOutline = ({ section, setSection, allSections, timer }) => {
         }
       )}
       <div className="w-full" style={{ position: 'absolute', bottom: '0' }}>
-        {hasStarted && DoughTimer}
-        <div className="border-t-2 border-light_gray w-full">
+        {hasStarted && <SidebarTimer timer={timer}/>}
+        <div className="border-t-2 border-light_gray">
           <div className="py-4 px-8">
             <span
               className="border-b-2 border-light_gray text-gray"
