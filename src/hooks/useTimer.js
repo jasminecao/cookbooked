@@ -49,7 +49,7 @@ export function useTimer() {
 
   const Timer = (
     <button
-      className="bg-white border-2 border-green text-green text-md py-2 px-6 rounded-lg ml-10 mb-2 mt-2 flex justify-between"
+      className="bg-white border-2 border-green text-green text-md py-2 px-6 rounded-lg ml-8 my-4 flex justify-between"
       style={{ width: '200px' }}
       disabled
     >

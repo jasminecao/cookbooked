@@ -23,7 +23,7 @@ const PieDough = ({ timer }) => {
               <span>1 hr 30 min</span>
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between mb-12">
             <div>
               <SubHeading>Steps</SubHeading>
               <div style={{ overflow: 'visible' }}>
@@ -52,7 +52,7 @@ const PieDough = ({ timer }) => {
                 </Checkbox>
                 {!hasStarted ? (
                   <button
-                    className="bg-white hover:bg-green hover:text-white border-2 border-green text-green text-sm py-2 px-6 rounded-lg ml-10 mb-2 mt-2 flex items-center"
+                    className="bg-white hover:bg-green hover:text-white border-2 border-green text-green text-sm py-2 px-6 rounded-lg ml-8 my-4 flex items-center"
                     style={{ width: 'fit-content' }}
                     onClick={() => startTimer(120)}
                   >
