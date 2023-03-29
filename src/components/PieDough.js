@@ -20,7 +20,7 @@ const PieDough = ({ timer }) => {
           <div className="w-3/4">
             <div className="mb-4">
               <span className="font-medium pr-2">Duration:</span>
-              <span>1 hr 30 min</span>
+              <span>40 min</span>
             </div>
           </div>
           <div className="flex justify-between mb-12">

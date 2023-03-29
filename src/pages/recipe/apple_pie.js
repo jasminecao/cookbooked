@@ -39,7 +39,7 @@ export default function ApplePiePage() {
     <>
       <NavBar />
       {hasMounted && (
-        <div className="flex h-[calc(100vh-64px)]">
+        <div className="flex min-h-[calc(100vh-64px)]">
           <RecipeOutline
             section={section}
             setSection={setSection}

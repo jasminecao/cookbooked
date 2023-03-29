@@ -35,7 +35,7 @@ const RecipeOutline = ({ section, setSection, allSections, timer }) => {
         }
       )}
       <div className="w-full" style={{ position: 'absolute', bottom: '0' }}>
-        {hasStarted && <SidebarTimer timer={timer}/>}
+        {hasStarted && <SidebarTimer timer={timer} />}
         <div className="border-t-2 border-light_gray">
           <div className="py-4 px-8">
             <span
