@@ -54,7 +54,7 @@ const PieDough = ({ timer }) => {
                   <button
                     className="bg-white hover:bg-green hover:text-white border-2 border-green text-green text-sm py-2 px-6 rounded-full ml-8 my-4 flex items-center"
                     style={{ width: 'fit-content' }}
-                    onClick={() => startTimer(120)}
+                    onClick={() => startTimer(1800)}
                   >
                     <ClockIcon size={16} className="mr-2" />
                     Start Timer
