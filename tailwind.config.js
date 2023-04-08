@@ -18,6 +18,7 @@ module.exports = withMT({
         green: '#6B8C85',
         gray: '#777777',
         light_gray: '#DFDFDF',
+        hover_gray: '#eeeeee',
         light_pink: '#F5D1D1',
         black: '#000000'
       },

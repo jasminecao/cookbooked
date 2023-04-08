@@ -11,7 +11,7 @@ export const Checkbox = ({ noMargin, step, children }) => {
   return (
     <div
       className={`flex ${
-        noMargin ? '' : step ? 'mb-5' : 'mb-3'
+        noMargin ? '' : step ? 'mt-2' : 'mb-3'
       } items-start w-full`}
       onClick={() => setChecked(!checked)}
       style={{ cursor: 'pointer' }}

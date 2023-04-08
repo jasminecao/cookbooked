@@ -1,5 +1,5 @@
 import { Checkbox } from '@/components/Checkbox'
-import { Heading, SubHeading } from '@/components/styles/Text'
+import { Heading, SubHeading, IngredientSubtext } from '@/components/styles/Text'
 import { IngredientInfo } from '@/components/styles/IngredientInfo'
 import Ingredients from '@/components/Accordion'
 import { ClockIcon } from '@primer/octicons-react'
@@ -16,38 +16,29 @@ const PieDough = ({ timer }) => {
             Edit
           </button>
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-8">
           <div className="w-3/4">
             <div className="mb-4">
               <span className="font-medium pr-2">Duration:</span>
               <span>40 min</span>
             </div>
           </div>
-          <div className="flex justify-between mb-12">
-            <div>
+          <div className="flex">
+            <div className="w-1/2">
               <SubHeading>Steps</SubHeading>
               <div style={{ overflow: 'visible' }}>
                 <Checkbox step>
-                  1. Combine{' '}
-                  <IngredientInfo amount={'3 cups'}>flour</IngredientInfo> with{' '}
-                  <IngredientInfo amount={'4 tablespoons'}>
-                    sugar
-                  </IngredientInfo>{' '}
-                  and{' '}
-                  <IngredientInfo amount={'1 teaspoon'}>salt</IngredientInfo>.
+                  1. Sift flour, sugar, and salt togther into a large bowl.
                 </Checkbox>
+                <IngredientSubtext ingredientsList={["3 cups all-purpose flour", "4 tbsp sugar", "1 tsp salt"]} />                <Checkbox step>
+                  2. Add cold butter to flour until clumps form.
+                </Checkbox>
+                <IngredientSubtext ingredientsList={["2 sticks butter"]} />
                 <Checkbox step>
-                  2. Add cold{' '}
-                  <IngredientInfo amount={'2 sticks'}>butter</IngredientInfo> to{' '}
-                  <IngredientInfo amount={'3 cups'}>flour</IngredientInfo> until
-                  clumps form.
+                  3. Sprinkle ice water in dough if necessary.
                 </Checkbox>
+                <IngredientSubtext ingredientsList={["1/2 cup ice water"]} />
                 <Checkbox step>
-                  3. Sprinkle{' '}
-                  <IngredientInfo amount={'1/2 cup'}>ice water</IngredientInfo>{' '}
-                  in dough if necessary.
-                </Checkbox>
-                <Checkbox noMargin step>
                   4. Chill dough for 30 minutes.
                 </Checkbox>
                 {!hasStarted ? (
@@ -62,16 +53,17 @@ const PieDough = ({ timer }) => {
                 ) : (
                   DoughTimer
                 )}
-                <Checkbox>
+                <Checkbox step>
                   5. Roll out the dough until it covers the pie plate.
                 </Checkbox>
               </div>
             </div>
-            <img className="rounded-md" src="/pie-dough.png" alt="Pie dough" />
+            <div className="w-1/2">
+              <img className="rounded-md float-right" src="/pie-dough.png" alt="Pie dough" />
+            </div>
           </div>
-        </div>
+          </div>
         <div className="flex">
-          <Ingredients />
           <div className="mt-2">
             <SubHeading>Notes</SubHeading>
             <span>

@@ -9,6 +9,16 @@ export const SubHeading = ({ children }) => (
   <h2 className="text-2xl font-medium mb-3">{children}</h2>
 )
 
+export const IngredientSubtext = ({ ingredientsList }) => (
+  <div classname="flex">
+  {ingredientsList.map((ingredient, index) => (
+    <p className="pl-10 text-gray" key={ingredient}>
+      {ingredient}
+    </p>
+  ))}
+  </div>
+)
+
 /**
  * Surrounds a number with a circle border (for recipe outline)
  * @param {number} number 
@@ -25,7 +35,7 @@ export const CircleNumber = ({ number }) => (
       marginRight: '8px',
     }}
   >
-    <span className="mx-auto" style={{ fontSize: '14px', lineHeight: '21px' }}>
+    <span className="mx-auto" style={{ fontSize: '14px', lineHeight: '19px' }}>
       {number}
     </span>
   </div>

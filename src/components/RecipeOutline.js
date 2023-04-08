@@ -2,7 +2,7 @@ import React from 'react'
 import { CircleNumber } from '@/components/styles/Text'
 import SidebarTimer from '@/components/SidebarAccordion'
 
-const RecipeOutline = ({ section, setSection, allSections, timer }) => {
+const RecipeOutline = ({ section, setSection, allSections, sectionTimes, timer }) => {
   const [DoughTimer, startTimer, hasStarted] = timer
 
   return (
@@ -16,7 +16,7 @@ const RecipeOutline = ({ section, setSection, allSections, timer }) => {
             <div
               key={sectionName}
               className={`text-2xl cursor-pointer py-3 ${
-                section === sectionName && 'bg-light_purple'
+                section === sectionName ? 'bg-light_purple' : 'hover:bg-light_purple/50'
               }`}
               onClick={() => setSection(sectionName)}
             >
@@ -30,6 +30,7 @@ const RecipeOutline = ({ section, setSection, allSections, timer }) => {
                 )}
                 <span>{sectionName}</span>
               </div>
+              {sectionName !== allSections.INTRO && <span className="pl-16 text-base text-gray">{sectionTimes[sectionKey]}</span>}
             </div>
           )
         }

@@ -13,6 +13,12 @@ const SECTION = {
   BAKING: 'Baking',
 }
 
+const TIMES = {
+  PIE_DOUGH: '40 minutes',
+  APPLE_FILLING: '10 minutes',
+  BAKING: '40 minutes',
+}
+
 export default function ApplePiePage() {
   // which section of the recipe to show
   const [section, setSection] = useLocalStorage('section', SECTION.INTRO)
@@ -44,6 +50,7 @@ export default function ApplePiePage() {
             section={section}
             setSection={setSection}
             allSections={SECTION}
+            sectionTimes={TIMES}
             timer={timer}
           />
           {displaySection(section)}
