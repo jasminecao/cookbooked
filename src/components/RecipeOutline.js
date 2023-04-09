@@ -7,8 +7,8 @@ const RecipeOutline = ({ section, setSection, allSections, sectionTimes, timer }
 
   return (
     <div
-      className="w-1/5 pt-7 border-r-2 border-light_gray"
-      style={{ position: 'relative' }}
+      className="w-1/5 pt-7 border-r-2 border-light_gray h-[calc(100vh-64px)]"
+      style={{ position: 'fixed' }}
     >
       {Object.entries(allSections).map(
         ([sectionKey, sectionName], sectionIdx) => {
@@ -16,7 +16,9 @@ const RecipeOutline = ({ section, setSection, allSections, sectionTimes, timer }
             <div
               key={sectionName}
               className={`text-2xl cursor-pointer py-3 ${
-                section === sectionName ? 'bg-light_purple' : 'hover:bg-light_purple/50'
+                section === sectionName
+                  ? 'bg-light_purple'
+                  : 'hover:bg-light_purple/50'
               }`}
               onClick={() => setSection(sectionName)}
             >
@@ -30,7 +32,11 @@ const RecipeOutline = ({ section, setSection, allSections, sectionTimes, timer }
                 )}
                 <span>{sectionName}</span>
               </div>
-              {sectionName !== allSections.INTRO && <span className="pl-16 text-base text-gray">{sectionTimes[sectionKey]}</span>}
+              {sectionName !== allSections.INTRO && (
+                <span className="pl-16 text-base text-gray">
+                  {sectionTimes[sectionKey]}
+                </span>
+              )}
             </div>
           )
         }

@@ -23,7 +23,11 @@ const NavBar = () => {
       </Head>
       <nav
         className="flex h-16 bg-bg_white px-9"
-        style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.05)' }}
+        style={{
+          boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.05)',
+          position: 'sticky',
+          top: '0',
+        }}
       >
         <Link href="/" className="my-auto">
           <div className="flex">
