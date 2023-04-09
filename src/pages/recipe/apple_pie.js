@@ -53,7 +53,10 @@ export default function ApplePiePage() {
             sectionTimes={TIMES}
             timer={timer}
           />
-          <div className="w-4/5 mt-10 px-16" style={{ marginLeft: '20%' }}>
+          <div
+            className="w-4/5 mt-10 px-16 mb-10"
+            style={{ marginLeft: '20%' }}
+          >
             {displaySection(section)}
           </div>
         </div>
