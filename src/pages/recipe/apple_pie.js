@@ -58,6 +58,7 @@ export default function ApplePiePage() {
             allSections={SECTION}
             sectionTimes={TIMES}
             timer={timer}
+            timer2={timer2}
           />
           <div className="w-4/5 mt-10 px-16" style={{ marginLeft: '20%' }}>
             {displaySection(section)}
