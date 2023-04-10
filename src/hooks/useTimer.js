@@ -6,6 +6,7 @@ export function useTimer() {
   const [timerIntervalId, setTimerIntervalId] = useState()
   const [paused, setPaused] = useState(false)
   const [hasFinished, setHasFinished] = useState(false)
+  const [timerName, setTimerName] = useState();
 
   const decrementSeconds = () => {
     setSeconds((curr) => {
@@ -19,11 +20,13 @@ export function useTimer() {
     })
   }
 
-  const startTimer = (seconds) => {
+  const startTimer = (seconds, name) => {
     console.log(seconds)
     setHasStarted(true)
     setSeconds(seconds)
     setHasFinished(false)
+    
+    setTimerName(name)
 
     const intervalID = setInterval(decrementSeconds, 1000)
     console.log('interval ID: ', intervalID)
@@ -97,5 +100,5 @@ export function useTimer() {
     </button>
   )
 
-  return [Timer, startTimer, hasStarted]
+  return [Timer, startTimer, hasStarted, timerName]
 }

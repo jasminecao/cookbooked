@@ -43,7 +43,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 export default function CustomizedAccordions({timer}) {
 
-  const [DoughTimer, startTimer, hasStarted] = timer;
+  const [Timer, startTimer, hasStarted, timerName] = timer;
   const [expanded, setExpanded] = React.useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -54,10 +54,10 @@ export default function CustomizedAccordions({timer}) {
     <div>
       <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary className="flex items-center pt-0 mt-0" aria-controls="panel1d-content" id="panel1d-header">
-          <span>Chill Dough</span>
+          <span>{timerName}</span>
         </AccordionSummary>
         <AccordionDetails className="py-0 my-0">
-            {DoughTimer}
+            {Timer}
         </AccordionDetails>
       </Accordion>
     </div>

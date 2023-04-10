@@ -2,21 +2,23 @@ import NavBar from '@/components/NavBar'
 import RecipeOutline from '@/components/RecipeOutline'
 import RecipeIntro from '@/components/RecipeIntro'
 import PieDough from '@/components/PieDough'
+import Crust from '@/components/Crust'
+import Batter from '@/components/Batter'
 import { useLocalStorage } from '@/hooks/useLocalStorage'
 import { useEffect, useState } from 'react'
 import { useTimer } from '@/hooks/useTimer'
 
 const SECTION = {
-  INTRO: 'Apple Pie',
-  PIE_DOUGH: 'Pie Dough',
-  APPLE_FILLING: 'Apple Filling',
-  BAKING: 'Baking',
+  INTRO: 'Matcha Cheesecake',
+  CRUST: 'Crust',
+  BATTER: 'Batter',
+  MATCHA: 'Matcha Flavoring',
 }
 
 const TIMES = {
-  PIE_DOUGH: '40 minutes',
-  APPLE_FILLING: '10 minutes',
-  BAKING: '40 minutes',
+  CRUST: '10 minutes',
+  BATTER: '10 minutes',
+  MATCHA: '40 minutes',
 }
 
 export default function ApplePiePage() {
@@ -24,6 +26,8 @@ export default function ApplePiePage() {
   const [section, setSection] = useLocalStorage('section', SECTION.INTRO)
   const [hasMounted, setHasMounted] = useState(false)
   const timer = useTimer()
+  const timer2 = useTimer()
+
 
   useEffect(() => {
     // prevent hydration error
@@ -34,8 +38,10 @@ export default function ApplePiePage() {
     switch (section) {
       case SECTION.INTRO:
         return <RecipeIntro />
-      case SECTION.PIE_DOUGH:
-        return <PieDough timer={timer} />
+      case SECTION.CRUST:
+        return <Crust />
+      case SECTION.BATTER:
+        return <Batter timer={timer} timer2={timer2}/>
       default:
         return <div>Coming Soon</div>
     }

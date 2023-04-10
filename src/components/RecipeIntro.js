@@ -6,52 +6,52 @@ const RecipeIntro = () => {
     return (
       <>
         <div className="flex justify-between">
-          <Heading>Apple Pie</Heading>
+          <Heading>Matcha Cheesecake</Heading>
           <button className="bg-green hover:bg-white hover:text-green border-2 border-green text-white text-sm py-2 px-6 rounded-full float-right">
             Edit
           </button>
         </div>
         <div className="mt-4 mb-4">
           <Tag background={'bg-light_purple'}>dessert</Tag>
-          <Tag background={'bg-light_pink'}>baking</Tag>
         </div>
         <div className="flex">
           <div className="w-3/4">
             <div className="flex mb-4">
               <div className="mr-6">
                 <span className="font-medium pr-2">Duration:</span>
-                <span>1 hr 30 min</span>
+                <span>6 hrs</span>
               </div>
               <div>
                 <span className="font-medium pr-2">Servings:</span>
-                <span>1</span>
+                <span>6</span>
               </div>
             </div>
             <span>
-              Homemade apple pie recipe from my grandma. Also tastes good with
-              blueberry or peach filling. Perfect for a brisk fall day :)
+              No-bake matcha cheesecake. Test recipe
             </span>
           </div>
-          <img className="rounded-md" src="/apple-pie.png" alt="Apple pie" />
+          <img className="rounded-md w-5/12" src="/matcha-cheesecake.png" alt="Matcha cheesecake final product" />
         </div>
         <div className="mt-4">
           <SubHeading>All Ingredients</SubHeading>
           <div className="w-3/4 gap-2 grid grid-cols-2 grid-rows-4">
-            <Checkbox>8-10 medium apples (thinly sliced)</Checkbox>
-            <Checkbox>1 teaspoon salt</Checkbox>
-            <Checkbox>4 tablespoons sugar</Checkbox>
-            <Checkbox>2 sticks of butter, cut into small pieces</Checkbox>
-            <Checkbox>3 cups all-purpose flour</Checkbox>
-            <Checkbox>1/2 cup ice water</Checkbox>
-            <Checkbox>1-2 teaspoons cinnamon</Checkbox>
-            <Checkbox>1 egg white</Checkbox>
+            <Checkbox>100g digestive biscuits</Checkbox>
+            <Checkbox>40g melted butter</Checkbox>
+            <Checkbox>5g gelatin</Checkbox>
+            <Checkbox>25 ml water</Checkbox>
+            <Checkbox>200g cream cheese</Checkbox>
+            <Checkbox>100g plain yogurt</Checkbox>
+            <Checkbox>65g white sugar</Checkbox>
+            <Checkbox>200g heavy cream</Checkbox>
+            <Checkbox>20 ml whole milk</Checkbox>
+            <Checkbox>7g matcha powder</Checkbox>
           </div>
         </div>
         <div className="mt-10">
           <SubHeading>Notes</SubHeading>
-          <span>
-            Use cold butter and ice water. Need to bring pie plate and fruit
-            peeler.
+          <span className="pb-10">
+            Proportions used for a slightly bigger than 6 inch cake pan. Can use 6g of gelatin for a more stable texture.
+            Equipment needed: spatula, immersion blender, cake pan.
           </span>
         </div>
       </>
