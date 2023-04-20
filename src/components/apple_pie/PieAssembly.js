@@ -89,8 +89,9 @@ const PieAssembly = ({ timer }) => {
           <div className="w-1/2">
             <img
               className="rounded-md float-right"
-              src="/pie-dough.png"
+              src="/pie-assembly.jpg"
               alt="Pie dough"
+              width="350"
             />
           </div>
         </div>

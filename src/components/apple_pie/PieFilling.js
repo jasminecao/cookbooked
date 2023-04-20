@@ -69,8 +69,9 @@ const PieFilling = ({ timer }) => {
           <div className="w-1/2">
             <img
               className="rounded-md float-right"
-              src="/pie-dough.png"
-              alt="Pie dough"
+              src="/apple-filling.png"
+              alt="Pie filling"
+              width="300px"
             />
           </div>
         </div>
