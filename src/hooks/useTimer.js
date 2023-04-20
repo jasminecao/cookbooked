@@ -6,6 +6,7 @@ export function useTimer() {
   const [timerIntervalId, setTimerIntervalId] = useState()
   const [paused, setPaused] = useState(false)
   const [hasFinished, setHasFinished] = useState(false)
+  const [timerName, setTimerName] = useState()
 
   const decrementSeconds = () => {
     setSeconds((curr) => {
@@ -19,14 +20,14 @@ export function useTimer() {
     })
   }
 
-  const startTimer = (seconds) => {
+  const startTimer = (seconds, name) => {
     console.log(seconds)
     setHasStarted(true)
     setSeconds(seconds)
     setHasFinished(false)
+    setTimerName(name)
 
     const intervalID = setInterval(decrementSeconds, 1000)
-    console.log('interval ID: ', intervalID)
     setTimerIntervalId(intervalID)
   }
 
@@ -49,8 +50,8 @@ export function useTimer() {
 
   const Timer = (
     <button
-      className="bg-white border-2 border-green text-green text-md py-2 px-6 rounded-lg ml-8 my-4 flex justify-between"
-      style={{ width: '200px' }}
+      className="bg-white border-2 border-green text-green text-md py-2 px-4 rounded-lg ml-10 mb-4 flex justify-between"
+      style={{ width: '160px' }}
       disabled
     >
       <div className="flex">
@@ -79,13 +80,12 @@ export function useTimer() {
           <img
             src="/cancel-timer.svg"
             alt="cancel"
-            className="w-6 mr-2"
+            className="w-6"
             onClick={() => cancelTimer()}
           />
         </button>
-        <span className="mr-4">Timer</span>
       </div>
-      <div style={{ width: '30px' }}>
+      <div>
         <span>
           {Math.floor(seconds / 60) < 10
             ? '0' + Math.floor(seconds / 60)
@@ -97,5 +97,5 @@ export function useTimer() {
     </button>
   )
 
-  return [Timer, startTimer, hasStarted]
+  return [Timer, startTimer, hasStarted, timerName]
 }

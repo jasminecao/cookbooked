@@ -1,5 +1,9 @@
 import { Checkbox } from '@/components/Checkbox'
-import { Heading, SubHeading, IngredientSubtext } from '@/components/styles/Text'
+import {
+  Heading,
+  SubHeading,
+  IngredientSubtext,
+} from '@/components/styles/Text'
 import { IngredientInfo } from '@/components/styles/IngredientInfo'
 import Ingredients from '@/components/Accordion'
 import { ClockIcon } from '@primer/octicons-react'
@@ -29,27 +33,22 @@ const PieDough = ({ timer }) => {
               <Checkbox step>
                 1. Sift flour, sugar, and salt togther into a large bowl.
               </Checkbox>
-              <IngredientSubtext
-                ingredientsList={[
-                  '3 cups all-purpose flour',
-                  '4 tbsp sugar',
-                  '1 tsp salt',
-                ]}
-              />{' '}
+              <IngredientSubtext ingredientsList={['flour', 'sugar', 'salt']} />
               <Checkbox step>
                 2. Add cold butter to flour until clumps form.
               </Checkbox>
-              <IngredientSubtext ingredientsList={['2 sticks butter']} />
+              <IngredientSubtext ingredientsList={['butter']} />
               <Checkbox step>
                 3. Sprinkle ice water in dough if necessary.
               </Checkbox>
-              <IngredientSubtext ingredientsList={['1/2 cup ice water']} />
+              <IngredientSubtext ingredientsList={['ice water']} />
               <Checkbox step>4. Chill dough for 30 minutes.</Checkbox>
+              <div className="m-4" />
               {!hasStarted ? (
                 <button
                   className="bg-white hover:bg-green hover:text-white border-2 border-green text-green text-sm py-2 px-6 rounded-full ml-8 my-4 flex items-center"
                   style={{ width: 'fit-content' }}
-                  onClick={() => startTimer(1800)}
+                  onClick={() => startTimer(1800, 'Chill Dough')}
                 >
                   <ClockIcon size={16} className="mr-2" />
                   Start Timer
@@ -75,8 +74,8 @@ const PieDough = ({ timer }) => {
         <div className="mt-2">
           <SubHeading>Notes</SubHeading>
           <span>
-            Use cold butter and ice water. Need to bring pie plate and fruit
-            peeler.
+            If the dough is dry, sprinkle up to a tablespoon more of cold water
+            over the mixture.
           </span>
         </div>
       </div>

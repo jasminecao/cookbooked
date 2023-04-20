@@ -1,3 +1,5 @@
+import { useIngredient } from '@/hooks/useIngredient'
+
 /**
  * Largest heading (font size of 36pt)
  */
@@ -9,19 +11,23 @@ export const SubHeading = ({ children }) => (
   <h2 className="text-2xl font-medium mb-3">{children}</h2>
 )
 
-export const IngredientSubtext = ({ ingredientsList }) => (
-  <div classname="flex">
-  {ingredientsList.map((ingredient, index) => (
-    <p className="pl-10 text-gray" key={ingredient}>
-      {ingredient}
-    </p>
-  ))}
-  </div>
-)
+export const IngredientSubtext = ({ ingredientsList }) => {
+  const [ingredients, serving, changeServing, getIngredient] = useIngredient()
+
+  return (
+    <div classname="flex">
+      {ingredientsList.map((ingredient, index) => (
+        <p className="pl-10 text-gray" key={ingredient}>
+          {getIngredient(ingredient)}
+        </p>
+      ))}
+    </div>
+  )
+}
 
 /**
  * Surrounds a number with a circle border (for recipe outline)
- * @param {number} number 
+ * @param {number} number
  */
 export const CircleNumber = ({ number }) => (
   <div

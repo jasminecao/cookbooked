@@ -38,28 +38,34 @@ const AccordionSummary = styled((props) => (
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   paddingTop: '0',
-  marginTop: '0'
-}));
+  paddingBottom: '0',
+  marginTop: '0',
+}))
 
 export default function CustomizedAccordions({timer}) {
 
-  const [DoughTimer, startTimer, hasStarted] = timer;
-  const [expanded, setExpanded] = React.useState('panel1');
+  const [DoughTimer, startTimer, hasStarted, timerName] = timer
+  const [expanded, setExpanded] = React.useState('panel1')
 
   const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
-  };
+    setExpanded(newExpanded ? panel : false)
+  }
 
   return (
     <div>
-      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary className="flex items-center pt-0 mt-0" aria-controls="panel1d-content" id="panel1d-header">
-          <span>Chill Dough</span>
+      <Accordion
+        expanded={expanded === 'panel1'}
+        onChange={handleChange('panel1')}
+      >
+        <AccordionSummary
+          className="flex items-center pt-0 mt-0"
+          aria-controls="panel1d-content"
+          id="panel1d-header"
+        >
+          <span>{timerName}</span>
         </AccordionSummary>
-        <AccordionDetails className="py-0 my-0">
-            {DoughTimer}
-        </AccordionDetails>
+        <AccordionDetails className="py-0 my-0">{DoughTimer}</AccordionDetails>
       </Accordion>
     </div>
-  );
+  )
 }

@@ -1,0 +1,33 @@
+[
+  { "amount": 3, "unit": "pound", "name": "apples" },
+  {
+    "amount": 4,
+    "unit": "tablespoon",
+    "name": "sugar"
+  },
+  {
+    "amount": 1,
+    "unit": "teaspoon",
+    "name": "salt"
+  },
+  {
+    "amount": 2,
+    "unit": "stick",
+    "name": "butter"
+  },
+  {
+    "amount": 1,
+    "unit": "cup",
+    "name": "ice water"
+  },
+  {
+    "amount": 2.5,
+    "unit": "cup",
+    "name": "flour"
+  },
+  {
+    "amount": 0.5,
+    "unit": "teaspoon",
+    "name": "cinnamon"
+  }
+]

@@ -3,7 +3,11 @@ import { CircleNumber } from '@/components/styles/Text'
 import SidebarTimer from '@/components/SidebarAccordion'
 
 const RecipeOutline = ({ section, setSection, allSections, sectionTimes, timer }) => {
-  const [DoughTimer, startTimer, hasStarted] = timer
+  const [
+    [DoughTimer, startDoughTimer, hasDoughStarted],
+    [FillingTimer, startFillingTimer, hasFillingStarted],
+    [BakingTimer, startBakingTimer, hasBakingStarted],
+  ] = timer
 
   return (
     <div
@@ -42,7 +46,9 @@ const RecipeOutline = ({ section, setSection, allSections, sectionTimes, timer }
         }
       )}
       <div className="w-full" style={{ position: 'absolute', bottom: '0' }}>
-        {hasStarted && <SidebarTimer timer={timer} />}
+        {hasBakingStarted && <SidebarTimer timer={timer[2]} />}
+        {hasFillingStarted && <SidebarTimer timer={timer[1]} />}
+        {hasDoughStarted && <SidebarTimer timer={timer[0]} />}
         <div className="border-t-2 border-light_gray">
           <div className="py-4 px-8">
             <span
