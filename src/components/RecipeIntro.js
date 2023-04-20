@@ -2,6 +2,7 @@ import { Checkbox } from '@/components/Checkbox'
 import { Heading, SubHeading } from '@/components/styles/Text'
 import { Tag } from '@/components/styles/Tag'
 import { useIngredient } from '@/hooks/useIngredient'
+import { motion } from 'framer-motion'
 
 const RecipeIntro = () => {
   const [ingredients, servingSelected, changeServing, getIngredient] =
@@ -34,18 +35,31 @@ const RecipeIntro = () => {
           <div className="mt-4">
             <span className="font-medium pr-2">Servings:</span>
             {servingOptions.map((serving) => (
-              <span
+              <button
                 key={serving.display}
-                className={`mr-2 p-1 rounded-md ${
+                className={`${
                   serving.multiplier === servingSelected
-                    ? 'bg-light_purple'
-                    : 'hover:bg-light_purple/50'
-                }`}
+                    ? ''
+                    : 'hover:text-gray'
+                } relative rounded-md px-2.5 py-1 transition`}
+                style={{
+                  WebkitTapHighlightColor: 'transparent',
+                }}
                 onClick={() => changeServing(serving.multiplier)}
-                style={{ cursor: 'pointer' }}
               >
+                {serving.multiplier === servingSelected && (
+                  <motion.span
+                    layoutId="bubble"
+                    className="rounded-md absolute z-10 inset-0 bg-light_purple mix-blend-multiply"
+                    transition={{
+                      type: 'spring',
+                      bounce: 0.1,
+                      duration: 0.5,
+                    }}
+                  />
+                )}
                 {serving.display}
-              </span>
+              </button>
             ))}
           </div>
           <div className="mt-4">
