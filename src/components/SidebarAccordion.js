@@ -18,7 +18,7 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<TriangleDownIcon className="mb-0" size={27} fill='black'/>}
+    expandIcon={<TriangleDownIcon className="mb-0" size={27} fill="black" />}
     {...props}
   />
 ))(({ theme }) => ({
@@ -26,15 +26,15 @@ const AccordionSummary = styled((props) => (
   display: 'flex',
   alignItems: 'center',
   flexDirection: 'row-reverse',
-  marginLeft: '.5rem',
+  marginLeft: '0.5rem',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(180deg)',
-    marginBottom: '0rem'
+    marginBottom: '0rem',
   },
   '& .MuiAccordionSummary-content': {
     marginLeft: theme.spacing(1),
   },
-}));
+}))
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   paddingTop: '0',
@@ -42,9 +42,8 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   marginTop: '0',
 }))
 
-export default function CustomizedAccordions({timer}) {
-
-  const [DoughTimer, startTimer, hasStarted, timerName] = timer
+export default function CustomizedAccordions({ timer }) {
+  const [DoughTimer, startTimer, hasStarted, timerName, hasFinished] = timer
   const [expanded, setExpanded] = React.useState('panel1')
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -54,17 +53,18 @@ export default function CustomizedAccordions({timer}) {
   return (
     <div>
       <Accordion
-        expanded={expanded === 'panel1'}
+        expanded={expanded === 'panel1' || hasFinished}
         onChange={handleChange('panel1')}
       >
         <AccordionSummary
           className="flex items-center pt-0 mt-0"
           aria-controls="panel1d-content"
           id="panel1d-header"
+          // style={{ backgroundColor: `#D7ECDE` }}
         >
           <span>{timerName}</span>
         </AccordionSummary>
-        <AccordionDetails className="py-0 my-0">{DoughTimer}</AccordionDetails>
+        <AccordionDetails>{DoughTimer}</AccordionDetails>
       </Accordion>
     </div>
   )

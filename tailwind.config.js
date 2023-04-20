@@ -20,7 +20,8 @@ module.exports = withMT({
         light_gray: '#DFDFDF',
         hover_gray: '#eeeeee',
         light_pink: '#F5D1D1',
-        black: '#000000'
+        black: '#000000',
+        timer_green: '#E7F5EC',
       },
     },
   },

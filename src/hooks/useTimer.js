@@ -50,7 +50,9 @@ export function useTimer() {
 
   const Timer = (
     <button
-      className="bg-white border-2 border-green text-green text-md py-2 px-4 rounded-lg ml-10 mb-4 flex justify-between"
+      className={`${
+        hasFinished ? 'bg-timer_green' : 'bg-white'
+      } border-2 border-green text-green text-md py-2 px-4 rounded-lg ml-10 mb-4 flex justify-between`}
       style={{ width: '160px' }}
       disabled
     >
@@ -86,16 +88,24 @@ export function useTimer() {
         </button>
       </div>
       <div>
-        <span>
-          {Math.floor(seconds / 60) < 10
-            ? '0' + Math.floor(seconds / 60)
-            : Math.floor(seconds / 60)}
-          :
-        </span>
-        <span>{seconds % 60 < 10 ? '0' + (seconds % 60) : seconds % 60}</span>
+        {!hasFinished ? (
+          <>
+            <span>
+              {Math.floor(seconds / 60) < 10
+                ? '0' + Math.floor(seconds / 60)
+                : Math.floor(seconds / 60)}
+              :
+            </span>
+            <span>
+              {seconds % 60 < 10 ? '0' + (seconds % 60) : seconds % 60}
+            </span>
+          </>
+        ) : (
+          'Finished!'
+        )}
       </div>
     </button>
   )
 
-  return [Timer, startTimer, hasStarted, timerName]
+  return [Timer, startTimer, hasStarted, timerName, hasFinished]
 }
