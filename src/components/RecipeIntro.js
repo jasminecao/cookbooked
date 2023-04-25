@@ -23,7 +23,7 @@ const RecipeIntro = () => {
         </button>
       </div>
       <div className="mt-4 mb-4">
-        <Tag background={'bg-light_purple'}>dessert</Tag>
+        <Tag background={'bg-purple'}>dessert</Tag>
         <Tag background={'bg-light_pink'}>baking</Tag>
       </div>
       <div className="flex">

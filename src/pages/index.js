@@ -47,7 +47,7 @@ export default function Home() {
                 </span>
               </div>
               <div className="px-6 pb-2">
-                <Tag background={'bg-light_purple'}>dessert</Tag>
+                <Tag background={'bg-purple'}>dessert</Tag>
                 <Tag background={'bg-light_pink'}>baking</Tag>
               </div>
             </Link>
@@ -69,7 +69,7 @@ export default function Home() {
               </span>
             </div>
             <div className="px-6 pb-2">
-              <Tag background={'bg-light_purple'}>dessert</Tag>
+              <Tag background={'bg-purple'}>dessert</Tag>
               <Tag background={'bg-light_pink'}>baking</Tag>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function Home() {
               </span>
             </div>
             <div className="px-6 pb-2">
-              <Tag background={'bg-light_purple'}>dessert</Tag>
+              <Tag background={'bg-purple'}>dessert</Tag>
               <Tag background={'bg-light_pink'}>baking</Tag>
             </div>
           </div>
@@ -100,11 +100,11 @@ export default function Home() {
             className="rounded overflow-hidden shadow-lg"
             style={{ width: '423px', height: '332px' }}
           >
-            <img 
-            className="w-full" 
-            src="/chili.png"
-            alt="Chili"
-            style={{ width: '423px', height: '221px' }}
+            <img
+              className="w-full"
+              src="/chili.png"
+              alt="Chili"
+              style={{ width: '423px', height: '221px' }}
             />
             <div className="px-6 py-4">
               <span className="font-bold text-xl mb-2">Chili</span>
@@ -113,7 +113,7 @@ export default function Home() {
               </span>
             </div>
             <div className="px-6 pb-2">
-              <Tag background={'bg-light_purple'}>dinner</Tag>
+              <Tag background={'bg-purple'}>dinner</Tag>
               <Tag background={'bg-light_pink'}>stove-top</Tag>
             </div>
           </div>

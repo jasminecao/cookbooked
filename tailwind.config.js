@@ -14,6 +14,7 @@ module.exports = withMT({
     extend: {
       colors: {
         bg_white: '#FDFDFB',
+        purple: '#ECE3F6',
         light_purple: '#E9EEFA',
         green: '#6B8C85',
         gray: '#777777',

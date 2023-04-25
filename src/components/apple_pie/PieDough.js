@@ -31,7 +31,7 @@ const PieDough = ({ timer }) => {
             <SubHeading>Steps</SubHeading>
             <div style={{ overflow: 'visible' }}>
               <Checkbox step>
-                1. Sift flour, sugar, and salt togther into a large bowl.
+                1. Sift flour, sugar, and salt together into a large bowl.
               </Checkbox>
               <IngredientSubtext ingredientsList={['flour', 'sugar', 'salt']} />
               <Checkbox step>
